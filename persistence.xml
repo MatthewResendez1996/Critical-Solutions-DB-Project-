@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="Debbie_Realtor">
+		<jta-data-source>jdbc/MoodyGarzaDB</jta-data-source>
+		<class>com.realtor.model.Users</class>
+		<class>com.realtor.model.UserType</class>
+		<class>com.realtor.model.Listing</class>
+		<class>com.realtor.model.ClientAppointment</class>
+		<class>com.realtor.model.ContractorListing</class>
+		<class>com.realtor.model.Service</class>
+		<class>com.realtor.model.ListingType</class>
+		<class>com.realtor.model.PropertyType</class>
+		<class>com.realtor.model.County</class>
+		<properties>		
+            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://172.26.54.44:1433;databaseName=MoodyGarzaDB" />
+            <property name="javax.persistence.jdbc.user" value="mgadmin" />
+            <property name="javax.persistence.jdbc.password" value="MoodyGarza1234" />
+            <property name="eclipselink.logging.parameters" value="true"/> 
+			<!--<property name="eclipselink.ddl-generation" value="create-tables"/>-->
+		</properties>
+	</persistence-unit>
+</persistence>
